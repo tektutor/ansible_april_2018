@@ -1,0 +1,9 @@
+- name: Demonstrates register variable usage
+  hosts: localhost
+  tasks:
+    - name: List the home directory content
+      shell: "ls -l /root"
+      register: output
+
+    - name: Print the register variable value
+      debug: var=output

@@ -1,0 +1,24 @@
+- name: Find if a particular file exists 
+  hosts: localhost 
+  ignore_errors: true
+  vars:
+    - path: /root/Training/Day3 
+    - filename: centos_default.conf
+
+  tasks:
+    - name: Find if file is present
+#      shell: "stat {{filename}}"
+      find: 
+         paths: "{{path}}" 
+         patterns: "{{filename}}"
+      register: result
+
+    - name: File found 
+      debug: msg="{{path}}/{{filename}} found !!!"
+#      when: ( result is success )
+      when: ( result.matched == 1 )
+
+    - name: File not found 
+      debug: msg="#$#$#@$ {{path}}/{{filename}} is not found."
+#      when: ( result is failed )
+      when: ( result.matched == 0 )

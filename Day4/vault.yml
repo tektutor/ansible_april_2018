@@ -1,0 +1,8 @@
+- name: Demonstrates retrieval of sensitive data protected by ansible vault
+  hosts: all
+  vars_files:
+   - sensitive_data
+  tasks:
+    - name: Print the contact details
+      debug: msg="{{item.value.name}} ==> {{item.value.mobile}}" verbosity=4
+      with_dict: "{{contacts}}"

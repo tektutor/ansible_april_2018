@@ -1,0 +1,7 @@
+- name: This play will demonstrate the use of apt module
+  hosts: ubuntu1
+  become: yes
+  become_method: su
+  tasks:
+   - name: Install tree utility
+     apt: name=tree update_cache=yes 

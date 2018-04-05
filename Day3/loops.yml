@@ -1,0 +1,30 @@
+- name: Demonstrates ansible loops
+  hosts: ubuntu
+  vars:
+    - software_packages:
+         - vim
+         - tree
+         - net-tools
+    - contacts:
+          Jegan:
+              name: Jeganathan Swaminathan
+              mobile: 123-456-7890
+          Nitesh:
+              name: Nitesh Jeganathan
+              mobile: 434-343-4545
+          Sriram:
+              name: Sriram Jeganathan
+              mobile: 988-454-1325
+
+  tasks:
+    - name: Install the software packages
+      apt: name="{{item}}" update_cache=yes state=present
+      with_items: "{{software_packages}}"
+
+    - name: Print all the contact details
+      debug: msg="{{item.value.name}} ==> {{item.value.mobile}}"
+      with_dict: "{{contacts}}"
+
+    - name: Print all the numbers in the sequence
+      debug: msg="{{item}}"
+      with_sequence: start=1 end=5

@@ -1,0 +1,15 @@
+- name: Creating dependent tasks
+  hosts: localhost 
+  ignore_errors: true
+  tasks: 
+    - name: Execute an invalid shell command here
+      shell: "ls -l /"
+      register: output
+
+    - name: Execute only if the previous task succeeded
+      debug: msg="Previous task succeeded"
+      when: ( output is success )
+
+    - name: Execute only if the first task failed 
+      debug: msg="Previous task failed"
+      when: ( output is failed )

@@ -1,0 +1,51 @@
+- name: This playbook will install, configure and deploy web page in Ubuntu & CentOS
+  hosts: all
+  become: yes
+  become_method: su 
+  vars:
+   - provisioner_tool: Docker
+   - automation_tool: Ansible
+  tasks: 
+   - name: Install nginx on Ubuntu OS
+     apt: name=nginx update_cache=yes state=present
+     when: ( ansible_os_family == "Debian" and ansible_distribution == "Ubuntu" )
+
+   - name: Install epel-release package on CentOS
+     yum: name=epel-release state=latest
+     when: ( ansible_os_family == "RedHat" and ansible_distribution == "CentOS" )
+     notify:
+       - Restart nginx web server on CentOS 
+
+   - name: Install nginx on CentOS
+     yum: name=nginx state=present
+     when: ( ansible_os_family == "RedHat" and ansible_distribution == "CentOS" )
+     notify:
+       - Restart nginx web server on CentOS 
+
+   - name: Configure nginx on Ubuntu OS
+     copy: src=ubuntu_default dest=/etc/nginx/sites-available/default
+     when: ( ansible_os_family == "Debian" and ansible_distribution == "Ubuntu" )
+     notify:
+       - Restart nginx web server on Ubuntu
+
+   - name: Configure nginx on CentOS
+     copy: src=centos_default.conf dest=/etc/nginx/conf.d/default.conf
+     when: ( ansible_os_family == "RedHat" and ansible_distribution == "CentOS" )
+     notify:
+       - Restart nginx web server on CentOS 
+       - Restart nginx web server on CentOS 
+
+   - name: Create custom nginx web root folder
+     shell: "mkdir -p /var/html" 
+
+   - name: Deploy web page in nginx
+     template: src=index.html.j2 dest=/var/html/index.html
+  
+  handlers:
+   - name: Restart nginx web server on CentOS
+     service: name=nginx state=restarted
+     when: ( ansible_os_family == "RedHat" and ansible_distribution == "CentOS" )
+
+   - name: Restart nginx web server on Ubuntu 
+     shell: "/etc/init.d/nginx restart" 
+     when: ( ansible_os_family == "Debian" and ansible_distribution == "Ubuntu" )

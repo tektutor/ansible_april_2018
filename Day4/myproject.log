@@ -1,0 +1,955 @@
+2018-04-05 15:25:46,753 p=43204 u=root |  ERROR! Missing required action
+2018-04-05 15:25:57,970 p=43234 u=root |  Encryption successful
+2018-04-05 15:26:14,439 p=43261 u=root |  Decryption successful
+2018-04-05 15:26:18,197 p=43274 u=root |  Encryption successful
+2018-04-05 15:30:46,110 p=43639 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:30:46,119 p=43639 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:30:47,023 p=43639 u=root |  ok: [172.17.0.3]
+2018-04-05 15:30:47,082 p=43639 u=root |  ok: [172.17.0.2]
+2018-04-05 15:30:47,415 p=43639 u=root |  ok: [172.17.0.7]
+2018-04-05 15:30:47,422 p=43639 u=root |  ok: [172.17.0.5]
+2018-04-05 15:30:47,434 p=43639 u=root |  ok: [172.17.0.6]
+2018-04-05 15:30:47,499 p=43639 u=root |  ok: [172.17.0.4]
+2018-04-05 15:30:47,507 p=43639 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:30:47,530 p=43639 u=root |  fatal: [172.17.0.5]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,542 p=43639 u=root |  fatal: [172.17.0.7]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,553 p=43639 u=root |  fatal: [172.17.0.3]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,565 p=43639 u=root |  fatal: [172.17.0.6]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,570 p=43639 u=root |  fatal: [172.17.0.2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,577 p=43639 u=root |  fatal: [172.17.0.4]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/root/Training/Day4/vault.yml': line 4, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Print the contact details\n      ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'item' is undefined"}
+2018-04-05 15:30:47,579 p=43639 u=root |  	to retry, use: --limit @/root/Training/Day4/vault.retry
+
+2018-04-05 15:30:47,579 p=43639 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:30:47,579 p=43639 u=root |  172.17.0.2                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:30:47,579 p=43639 u=root |  172.17.0.3                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:30:47,580 p=43639 u=root |  172.17.0.4                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:30:47,580 p=43639 u=root |  172.17.0.5                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:30:47,580 p=43639 u=root |  172.17.0.6                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:30:47,580 p=43639 u=root |  172.17.0.7                 : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-05 15:31:52,860 p=44098 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:31:52,869 p=44098 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:31:53,744 p=44098 u=root |  ok: [172.17.0.3]
+2018-04-05 15:31:53,824 p=44098 u=root |  ok: [172.17.0.2]
+2018-04-05 15:31:54,159 p=44098 u=root |  ok: [172.17.0.7]
+2018-04-05 15:31:54,165 p=44098 u=root |  ok: [172.17.0.5]
+2018-04-05 15:31:54,219 p=44098 u=root |  ok: [172.17.0.6]
+2018-04-05 15:31:54,243 p=44098 u=root |  ok: [172.17.0.4]
+2018-04-05 15:31:54,249 p=44098 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:31:54,344 p=44098 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,345 p=44098 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,346 p=44098 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,360 p=44098 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,360 p=44098 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,362 p=44098 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,363 p=44098 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,370 p=44098 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,371 p=44098 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,371 p=44098 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,379 p=44098 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,388 p=44098 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,398 p=44098 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,400 p=44098 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,401 p=44098 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:31:54,418 p=44098 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:31:54,418 p=44098 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,430 p=44098 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:31:54,434 p=44098 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:31:54,434 p=44098 u=root |  172.17.0.2                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:31:54,434 p=44098 u=root |  172.17.0.3                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:31:54,434 p=44098 u=root |  172.17.0.4                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:31:54,435 p=44098 u=root |  172.17.0.5                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:31:54,435 p=44098 u=root |  172.17.0.6                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:31:54,435 p=44098 u=root |  172.17.0.7                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:28,745 p=44540 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:32:28,754 p=44540 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:32:29,430 p=44540 u=root |  ok: [172.17.0.2]
+2018-04-05 15:32:29,497 p=44540 u=root |  ok: [172.17.0.3]
+2018-04-05 15:32:29,801 p=44540 u=root |  ok: [172.17.0.4]
+2018-04-05 15:32:29,895 p=44540 u=root |  ok: [172.17.0.7]
+2018-04-05 15:32:29,901 p=44540 u=root |  ok: [172.17.0.6]
+2018-04-05 15:32:29,912 p=44540 u=root |  ok: [172.17.0.5]
+2018-04-05 15:32:29,918 p=44540 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:32:30,001 p=44540 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,002 p=44540 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,002 p=44540 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,003 p=44540 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,004 p=44540 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,004 p=44540 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,008 p=44540 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,009 p=44540 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,021 p=44540 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,028 p=44540 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,028 p=44540 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,041 p=44540 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:30,042 p=44540 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,045 p=44540 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,046 p=44540 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,048 p=44540 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,060 p=44540 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:30,068 p=44540 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:30,071 p=44540 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:32:30,071 p=44540 u=root |  172.17.0.2                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:30,071 p=44540 u=root |  172.17.0.3                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:30,072 p=44540 u=root |  172.17.0.4                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:30,072 p=44540 u=root |  172.17.0.5                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:30,072 p=44540 u=root |  172.17.0.6                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:30,072 p=44540 u=root |  172.17.0.7                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:52,487 p=44919 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:32:52,498 p=44919 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:32:53,195 p=44919 u=root |  ok: [172.17.0.2]
+2018-04-05 15:32:53,224 p=44919 u=root |  ok: [172.17.0.3]
+2018-04-05 15:32:53,625 p=44919 u=root |  ok: [172.17.0.4]
+2018-04-05 15:32:53,631 p=44919 u=root |  ok: [172.17.0.7]
+2018-04-05 15:32:53,706 p=44919 u=root |  ok: [172.17.0.5]
+2018-04-05 15:32:53,718 p=44919 u=root |  ok: [172.17.0.6]
+2018-04-05 15:32:53,724 p=44919 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:32:53,813 p=44919 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,814 p=44919 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,827 p=44919 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,827 p=44919 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,828 p=44919 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,835 p=44919 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,835 p=44919 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,859 p=44919 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,859 p=44919 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,872 p=44919 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,872 p=44919 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,873 p=44919 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) 
+2018-04-05 15:32:53,880 p=44919 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,881 p=44919 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,883 p=44919 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,884 p=44919 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,884 p=44919 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) 
+2018-04-05 15:32:53,885 p=44919 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) 
+2018-04-05 15:32:53,888 p=44919 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:32:53,888 p=44919 u=root |  172.17.0.2                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:53,888 p=44919 u=root |  172.17.0.3                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:53,889 p=44919 u=root |  172.17.0.4                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:53,889 p=44919 u=root |  172.17.0.5                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:53,889 p=44919 u=root |  172.17.0.6                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:32:53,889 p=44919 u=root |  172.17.0.7                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:55,752 p=45739 u=root |  ansible-playbook 2.4.3.0
+  config file = /root/Training/Day4/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Aug  4 2017, 00:39:18) [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+2018-04-05 15:44:55,753 p=45739 u=root |  Using /root/Training/Day4/ansible.cfg as config file
+2018-04-05 15:44:56,110 p=45739 u=root |  Parsed /root/Training/Day4/ansible-docker-dynamic-inventory/dynamic_inventory.py inventory source with script plugin
+2018-04-05 15:44:56,274 p=45739 u=root |  PLAYBOOK: vault.yml *******************************************************************
+2018-04-05 15:44:56,274 p=45739 u=root |  1 plays in vault.yml
+2018-04-05 15:44:56,323 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,325 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,325 p=45739 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:44:56,336 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,336 p=45739 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:44:56,344 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,351 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,360 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,369 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,385 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:56,600 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:56,600 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:56,601 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:56,598 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:56,603 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:57,279 p=45739 u=root |  ok: [172.17.0.2]
+2018-04-05 15:44:57,308 p=45739 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:44:57,359 p=45739 u=root |  ok: [172.17.0.3]
+2018-04-05 15:44:57,893 p=45739 u=root |  ok: [172.17.0.6]
+2018-04-05 15:44:57,900 p=45739 u=root |  ok: [172.17.0.4]
+2018-04-05 15:44:57,925 p=45739 u=root |  ok: [172.17.0.5]
+2018-04-05 15:44:57,938 p=45739 u=root |  ok: [172.17.0.7]
+2018-04-05 15:44:57,939 p=45739 u=root |  META: ran handlers
+2018-04-05 15:44:57,945 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:57,946 p=45739 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:44:57,946 p=45739 u=root |  task path: /root/Training/Day4/vault.yml:6
+2018-04-05 15:44:57,956 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:57,967 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:57,991 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:58,024 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:58,041 p=45739 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:44:58,054 p=45739 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,057 p=45739 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,058 p=45739 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,081 p=45739 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,082 p=45739 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,089 p=45739 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,089 p=45739 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,092 p=45739 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,093 p=45739 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,107 p=45739 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,108 p=45739 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,113 p=45739 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,130 p=45739 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:44:58,131 p=45739 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,134 p=45739 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,135 p=45739 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,136 p=45739 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:44:58,140 p=45739 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:44:58,143 p=45739 u=root |  META: ran handlers
+2018-04-05 15:44:58,143 p=45739 u=root |  META: ran handlers
+2018-04-05 15:44:58,147 p=45739 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:44:58,147 p=45739 u=root |  172.17.0.2                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:58,148 p=45739 u=root |  172.17.0.3                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:58,148 p=45739 u=root |  172.17.0.4                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:58,148 p=45739 u=root |  172.17.0.5                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:58,148 p=45739 u=root |  172.17.0.6                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:44:58,148 p=45739 u=root |  172.17.0.7                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:52,140 p=46215 u=root |  Using /root/Training/Day4/ansible.cfg as config file
+2018-04-05 15:45:52,716 p=46215 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:45:52,726 p=46215 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:45:53,453 p=46215 u=root |  ok: [172.17.0.3]
+2018-04-05 15:45:53,496 p=46215 u=root |  ok: [172.17.0.2]
+2018-04-05 15:45:53,820 p=46215 u=root |  ok: [172.17.0.4]
+2018-04-05 15:45:53,889 p=46215 u=root |  ok: [172.17.0.7]
+2018-04-05 15:45:53,896 p=46215 u=root |  ok: [172.17.0.5]
+2018-04-05 15:45:53,918 p=46215 u=root |  ok: [172.17.0.6]
+2018-04-05 15:45:53,924 p=46215 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:45:53,998 p=46215 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,001 p=46215 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,001 p=46215 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,028 p=46215 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,029 p=46215 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,036 p=46215 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,037 p=46215 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,045 p=46215 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,049 p=46215 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,050 p=46215 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,069 p=46215 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,070 p=46215 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,078 p=46215 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,081 p=46215 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,085 p=46215 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:45:54,097 p=46215 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,102 p=46215 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:45:54,108 p=46215 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:45:54,113 p=46215 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.2                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.3                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.4                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.5                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.6                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:45:54,114 p=46215 u=root |  172.17.0.7                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:16,229 p=46580 u=root |  Using /root/Training/Day4/ansible.cfg as config file
+2018-04-05 15:46:16,802 p=46580 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:46:16,812 p=46580 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:46:17,502 p=46580 u=root |  ok: [172.17.0.2]
+2018-04-05 15:46:17,523 p=46580 u=root |  ok: [172.17.0.3]
+2018-04-05 15:46:17,889 p=46580 u=root |  ok: [172.17.0.4]
+2018-04-05 15:46:17,926 p=46580 u=root |  ok: [172.17.0.5]
+2018-04-05 15:46:17,972 p=46580 u=root |  ok: [172.17.0.7]
+2018-04-05 15:46:17,988 p=46580 u=root |  ok: [172.17.0.6]
+2018-04-05 15:46:17,995 p=46580 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:46:18,087 p=46580 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,091 p=46580 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,092 p=46580 u=root |  skipping: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,094 p=46580 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,107 p=46580 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,108 p=46580 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,108 p=46580 u=root |  skipping: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,120 p=46580 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,128 p=46580 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,129 p=46580 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,129 p=46580 u=root |  skipping: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,137 p=46580 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,137 p=46580 u=root |  skipping: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,138 p=46580 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,139 p=46580 u=root |  skipping: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,139 p=46580 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'})  => {"changed": false, "item": {"key": "Nitesh", "value": {"mobile": "434-343-4545", "name": "Nitesh Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,147 p=46580 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'})  => {"changed": false, "item": {"key": "Jegan", "value": {"mobile": "123-456-7890", "name": "Jeganathan Swaminathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,153 p=46580 u=root |  skipping: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'})  => {"changed": false, "item": {"key": "Sriram", "value": {"mobile": "988-454-1325", "name": "Sriram Jeganathan"}}, "skipped_reason": "Verbosity threshold not met."}
+2018-04-05 15:46:18,156 p=46580 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.2                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.3                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.4                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.5                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.6                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:18,156 p=46580 u=root |  172.17.0.7                 : ok=1    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:39,617 p=46932 u=root |  ansible-playbook 2.4.3.0
+  config file = /root/Training/Day4/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Aug  4 2017, 00:39:18) [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+2018-04-05 15:46:39,617 p=46932 u=root |  Using /root/Training/Day4/ansible.cfg as config file
+2018-04-05 15:46:39,617 p=46932 u=root |  Reading vault password file: /root/Training/Day4/.secret
+2018-04-05 15:46:39,617 p=46932 u=root |  setting up inventory plugins
+2018-04-05 15:46:39,998 p=46932 u=root |  Parsed /root/Training/Day4/ansible-docker-dynamic-inventory/dynamic_inventory.py inventory source with script plugin
+2018-04-05 15:46:40,077 p=46932 u=root |  Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/site-packages/ansible/plugins/callback/default.pyc
+2018-04-05 15:46:40,160 p=46932 u=root |  PLAYBOOK: vault.yml *******************************************************************
+2018-04-05 15:46:40,160 p=46932 u=root |  1 plays in vault.yml
+2018-04-05 15:46:40,190 p=46932 u=root |  Found a vault_id (default) in the vaulttext
+2018-04-05 15:46:40,190 p=46932 u=root |  We have a secret associated with vault id (default), will try to use to decrypt /root/Training/Day4/sensitive_data
+2018-04-05 15:46:40,190 p=46932 u=root |  Trying to use vault secret=(FileVaultSecret(filename='/root/Training/Day4/.secret')) id=default to decrypt /root/Training/Day4/sensitive_data
+2018-04-05 15:46:40,190 p=46932 u=root |  Trying secret FileVaultSecret(filename='/root/Training/Day4/.secret') for vault_id=default
+2018-04-05 15:46:40,213 p=46932 u=root |  decrypt succesful with secret=FileVaultSecret(filename='/root/Training/Day4/.secret') and vault_id=default
+2018-04-05 15:46:40,213 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,215 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,215 p=46932 u=root |  PLAY [Demonstrates retrieval of sensitive data protected by ansible vault] ************
+2018-04-05 15:46:40,225 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,225 p=46932 u=root |  TASK [Gathering Facts] ****************************************************************
+2018-04-05 15:46:40,232 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,240 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,249 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,256 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/basic.py
+2018-04-05 15:46:40,256 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/__init__.py
+2018-04-05 15:46:40,256 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/namespace.py
+2018-04-05 15:46:40,256 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/ansible_collector.py
+2018-04-05 15:46:40,257 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/default_collectors.py
+2018-04-05 15:46:40,260 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,280 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:40,324 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/_text.py
+2018-04-05 15:46:40,324 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+2018-04-05 15:46:40,324 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+2018-04-05 15:46:40,325 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+2018-04-05 15:46:40,325 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+2018-04-05 15:46:40,345 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/compat.py
+2018-04-05 15:46:40,348 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/timeout.py
+2018-04-05 15:46:40,349 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/collector.py
+2018-04-05 15:46:40,359 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/freebsd.py
+2018-04-05 15:46:40,359 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/openbsd.py
+2018-04-05 15:46:40,359 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/base.py
+2018-04-05 15:46:40,359 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/dragonfly.py
+2018-04-05 15:46:40,360 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/dragonfly.py
+2018-04-05 15:46:40,360 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/aix.py
+2018-04-05 15:46:40,360 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/aix.py
+2018-04-05 15:46:40,361 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/linux.py
+2018-04-05 15:46:40,361 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/platform.py
+2018-04-05 15:46:40,361 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/hpux.py
+2018-04-05 15:46:40,361 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/user.py
+2018-04-05 15:46:40,362 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/hurd.py
+2018-04-05 15:46:40,362 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/other/facter.py
+2018-04-05 15:46:40,362 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/sunos.py
+2018-04-05 15:46:40,362 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/hpux.py
+2018-04-05 15:46:40,363 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/distribution.py
+2018-04-05 15:46:40,363 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/freebsd.py
+2018-04-05 15:46:40,363 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/__init__.py
+2018-04-05 15:46:40,363 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/openbsd.py
+2018-04-05 15:46:40,364 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/darwin.py
+2018-04-05 15:46:40,364 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/linux.py
+2018-04-05 15:46:40,364 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/sunos.py
+2018-04-05 15:46:40,365 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/sunos.py
+2018-04-05 15:46:40,365 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/apparmor.py
+2018-04-05 15:46:40,365 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/openbsd.py
+2018-04-05 15:46:40,365 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/local.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/other/ohai.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/other/__init__.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/service_mgr.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/hurd.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/hpux.py
+2018-04-05 15:46:40,366 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/fips.py
+2018-04-05 15:46:40,367 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/selinux.py
+2018-04-05 15:46:40,367 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/__init__.py
+2018-04-05 15:46:40,367 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/pkg_mgr.py
+2018-04-05 15:46:40,367 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/dns.py
+2018-04-05 15:46:40,367 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/base.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/darwin.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/dragonfly.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/ssh_pub_keys.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/__init__.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/__init__.py
+2018-04-05 15:46:40,368 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/lsb.py
+2018-04-05 15:46:40,369 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/date_time.py
+2018-04-05 15:46:40,369 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/netbsd.py
+2018-04-05 15:46:40,369 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/base.py
+2018-04-05 15:46:40,369 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/cmdline.py
+2018-04-05 15:46:40,369 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/freebsd.py
+2018-04-05 15:46:40,370 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/netbsd.py
+2018-04-05 15:46:40,370 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/netbsd.py
+2018-04-05 15:46:40,370 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/caps.py
+2018-04-05 15:46:40,370 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/env.py
+2018-04-05 15:46:40,370 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/linux.py
+2018-04-05 15:46:40,371 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/system/python.py
+2018-04-05 15:46:40,371 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/network/generic_bsd.py
+2018-04-05 15:46:40,379 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/sysctl.py
+2018-04-05 15:46:40,379 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/utils.py
+2018-04-05 15:46:40,469 p=46932 u=root |  Using module_utils file /usr/lib/python2.7/site-packages/ansible/module_utils/facts/sysctl.py
+2018-04-05 15:46:40,501 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:40,502 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:40,502 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:40,505 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:40,507 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:41,159 p=46932 u=root |  ok: [172.17.0.2]
+2018-04-05 15:46:41,185 p=46932 u=root |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-05 15:46:41,190 p=46932 u=root |  ok: [172.17.0.3]
+2018-04-05 15:46:41,656 p=46932 u=root |  ok: [172.17.0.6]
+2018-04-05 15:46:41,666 p=46932 u=root |  ok: [172.17.0.7]
+2018-04-05 15:46:41,676 p=46932 u=root |  ok: [172.17.0.5]
+2018-04-05 15:46:41,687 p=46932 u=root |  ok: [172.17.0.4]
+2018-04-05 15:46:41,688 p=46932 u=root |  META: ran handlers
+2018-04-05 15:46:41,694 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,694 p=46932 u=root |  TASK [Print the contact details] ******************************************************
+2018-04-05 15:46:41,695 p=46932 u=root |  task path: /root/Training/Day4/vault.yml:6
+2018-04-05 15:46:41,708 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,722 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,734 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,758 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,784 p=46932 u=root |  Read vars_file 'sensitive_data'
+2018-04-05 15:46:41,814 p=46932 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,815 p=46932 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,815 p=46932 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,816 p=46932 u=root |  ok: [172.17.0.5] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,817 p=46932 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,817 p=46932 u=root |  ok: [172.17.0.7] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,838 p=46932 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,839 p=46932 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,848 p=46932 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,849 p=46932 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,850 p=46932 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,860 p=46932 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,861 p=46932 u=root |  ok: [172.17.0.2] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,872 p=46932 u=root |  ok: [172.17.0.6] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,876 p=46932 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'434-343-4545', u'name': u'Nitesh Jeganathan'}, 'key': u'Nitesh'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Nitesh", 
+        "value": {
+            "mobile": "434-343-4545", 
+            "name": "Nitesh Jeganathan"
+        }
+    }, 
+    "msg": "Nitesh Jeganathan ==> 434-343-4545"
+}
+2018-04-05 15:46:41,877 p=46932 u=root |  ok: [172.17.0.3] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,888 p=46932 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'123-456-7890', u'name': u'Jeganathan Swaminathan'}, 'key': u'Jegan'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Jegan", 
+        "value": {
+            "mobile": "123-456-7890", 
+            "name": "Jeganathan Swaminathan"
+        }
+    }, 
+    "msg": "Jeganathan Swaminathan ==> 123-456-7890"
+}
+2018-04-05 15:46:41,902 p=46932 u=root |  ok: [172.17.0.4] => (item={'value': {u'mobile': u'988-454-1325', u'name': u'Sriram Jeganathan'}, 'key': u'Sriram'}) => {
+    "changed": false, 
+    "item": {
+        "key": "Sriram", 
+        "value": {
+            "mobile": "988-454-1325", 
+            "name": "Sriram Jeganathan"
+        }
+    }, 
+    "msg": "Sriram Jeganathan ==> 988-454-1325"
+}
+2018-04-05 15:46:41,905 p=46932 u=root |  META: ran handlers
+2018-04-05 15:46:41,906 p=46932 u=root |  META: ran handlers
+2018-04-05 15:46:41,907 p=46932 u=root |  PLAY RECAP ****************************************************************************
+2018-04-05 15:46:41,907 p=46932 u=root |  172.17.0.2                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:41,907 p=46932 u=root |  172.17.0.3                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:41,908 p=46932 u=root |  172.17.0.4                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:41,908 p=46932 u=root |  172.17.0.5                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:41,908 p=46932 u=root |  172.17.0.6                 : ok=2    changed=0    unreachable=0    failed=0   
+2018-04-05 15:46:41,908 p=46932 u=root |  172.17.0.7                 : ok=2    changed=0    unreachable=0    failed=0   

@@ -1,0 +1,11 @@
+---
+
+- hosts: all 
+  
+  tasks:
+    - name: Invoke our custom module
+      add: firstInput=1000  secondInput=5000
+      register: output
+
+    - name: Print the result output
+      debug: var=output

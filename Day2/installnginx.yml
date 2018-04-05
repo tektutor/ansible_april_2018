@@ -1,0 +1,23 @@
+- name: This playbook will install, configure and deploy webpage in nginx server
+  hosts: all
+  become: yes 
+  become_method: su
+  vars:
+   - provisioner_tool: Docker
+   - automation_tool: Ansible
+
+  tasks:
+    - name: Install nginx web server
+      apt: name=nginx update_cache=yes
+
+    - name: Configure nginx web server
+      copy: src=default dest=/etc/nginx/sites-available/default
+
+    - name: Create the web home folder for nginx web server
+      shell: "mkdir -p /var/html"
+
+    - name: Deploy a web page inside nginx web server
+      template: src=index.html.j2 dest=/var/html/index.html
+
+    - name: Restart the nginx web server
+      shell: "/etc/init.d/nginx restart"

@@ -1,0 +1,17 @@
+---
+
+- name: This playbook will demonstrate the use of pre and post tasks
+  hosts: localhost 
+  pre_tasks:
+    - name: Execute the pre tasks here
+      debug: var=ansible_hostname
+
+  tasks:
+    - name: All your regular tasks goes here
+      debug: msg="Tasks - {{ansible_hostname}} --> {{ansible_all_ipv4_addresses}}"
+
+  post_tasks:
+     - debug:
+         msg: "Post Tasks - This task will be executed at the end."
+
+...

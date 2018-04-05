@@ -1,0 +1,9 @@
+[all]
+ubuntu[1:3]
+
+[dev-servers]
+ubuntu1
+
+[qa-servers]
+ubuntu[2:3]
+
