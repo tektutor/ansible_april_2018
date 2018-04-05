@@ -22,7 +22,7 @@ def main():
    addObj = Adder()
    response = { "Result": str( addObj.add ( firstNumber, secondNumber ) ) }
 
-   module.exit_json ( changed=False, meta=response )
-   #module.fail_json ( "Fatal error occured" )
+   #module.exit_json ( changed=True, meta=response )
+   module.fail_json ( "Fatal error occured" )
 
 main()

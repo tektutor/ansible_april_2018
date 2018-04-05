@@ -1,0 +1,11 @@
+- name: Install nginx in Ubuntu
+  apt: name=nginx update_cache=yes state=present
+  when: ansible_distribution == "Ubuntu" 
+
+- name: Install nginx in CentOS 
+  yum: name=epel-release state=present
+  when: ansible_distribution == "CentOS" 
+
+- name: Install nginx in CentOS 
+  yum: name=nginx state=present
+  when: ansible_distribution == "CentOS" 

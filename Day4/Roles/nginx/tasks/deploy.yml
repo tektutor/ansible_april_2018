@@ -1,0 +1,9 @@
+- name: Deploy web page in nginx in Ubuntu
+  template: src=index.html.j2 dest=/var/html/index.html
+  notify:
+     - Restart nginx in Ubuntu
+
+- name: Deploy web page in nginx in CentOS 
+  template: src=index.html.j2 dest=/var/html/index.html
+  notify:
+     - Restart nginx in CentOS 
