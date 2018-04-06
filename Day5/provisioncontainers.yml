@@ -1,0 +1,39 @@
+---
+
+- name: This play will start a docker container on the fly
+  hosts: localhost
+  become: yes
+  ignore_errors: true
+  
+#  pre_tasks:
+#   - name: Stop all docker containers
+#     shell: "docker rm -f $(docker ps -aq)"
+#     ignore_errors: true
+
+  tasks:
+   - name: Provision ubuntu docker containers
+     docker_container:
+        docker_host: tcp://localhost:2375
+        api_version: 1.18
+        image: tektutor/ansible-ubuntu
+        hostname: "ubuntu{{item}}"
+        name: "ubuntu{{item}}"
+        state: started
+        ports:
+          - "200{{item}}:22"
+          - "800{{item}}:80"
+     sequence: start=1  end=4
+
+   - name: Provision centos docker containers
+     docker_container:
+        docker_host: tcp://localhost:2375
+        api_version: 1.18
+        image: tektutor/ansible-centos
+        hostname: "centos{{item}}"
+        name: "centos{{item}}"
+        state: started
+        ports:
+          - "300{{item}}:22"
+          - "900{{item}}:80"
+     sequence: start=1  end=4
+...
